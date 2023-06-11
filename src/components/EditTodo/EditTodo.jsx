@@ -8,7 +8,7 @@ export default function EditTodo({ todo }) {
     e.preventDefault();
     try {
       const body = { description };
-      await fetch(`todo-61ad.up.railway.app/todos/${todo.id}`, {
+      await fetch(`https://todo-61ad.up.railway.app/todos/${todo.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
