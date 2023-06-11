@@ -6,7 +6,7 @@ export default function ListTodos() {
 
   async function getTodos() {
     try {
-      const response = await fetch("http://localhost:5000/todos");
+      const response = await fetch("todo-61ad.up.railway.app/todos");
       const data = await response.json();
       setTodos(data);
     } catch (err) {
@@ -20,7 +20,7 @@ export default function ListTodos() {
 
   async function deleteTodo(id) {
     try {
-      await fetch(`http://localhost:5000/todos/${id}`, {
+      await fetch(`todo-61ad.up.railway.app/todos/${id}`, {
         method: "DELETE",
       });
       setTodos(todos.filter((todo) => todo.id !== id));
